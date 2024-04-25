@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -84,17 +85,19 @@ fun LemonApp() {
                 horizontalAlignment = Alignment.CenterHorizontally,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Image(
-                    painter = painterResource(id = imageResource),
-                    contentDescription = descriptionResource,
-                    modifier = Modifier
-                        .clickable { result = result.plus(1) }
-                        .border(
-                            width = 2.dp,
-                            shape = RoundedCornerShape(4.dp),
-                            color = Color(0xFF69CDD8)
-                        )
-                )
+                Button(onClick = { }) {
+                    Image(
+                        painter = painterResource(id = imageResource),
+                        contentDescription = descriptionResource,
+                        modifier = Modifier
+                            .clickable { result = result.plus(1) }
+                            .border(
+                                width = 2.dp,
+                                shape = RoundedCornerShape(4.dp),
+                                color = Color(0xFF69CDD8)
+                            )
+                    )
+                }
                 Spacer(modifier = Modifier.padding(16.dp))
                 Text(
                     text = descriptionResource,
